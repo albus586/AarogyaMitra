@@ -1,0 +1,1 @@
+gcloud run deploy arogya-mitra-website --image gcr.io/chronix-448216/arogya-mitra:v1 --platform managed --region asia-south1 --allow-unauthenticated --memory 16Gi --cpu 6

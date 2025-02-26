@@ -1,0 +1,206 @@
+/* Add this CSS to your global styles or as a CSS module */
+
+.ag-timeline-block {
+  padding: 100px 0;
+}
+
+.ag-timeline_title-box {
+  padding: 0 0 30px;
+  text-align: center;
+}
+
+.ag-timeline {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+
+.ag-timeline_line {
+  width: 2px;
+  background-color: #393935;
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  bottom: 0;
+  overflow: hidden;
+  transform: translateX(-50%);
+}
+
+.ag-timeline_line-progress {
+  width: 100%;
+  height: 20%;
+  background-color: #FF0;
+}
+
+.ag-timeline-card_box {
+  padding: 0 0 20px 50%;
+}
+
+.ag-timeline_item:nth-child(2n) .ag-timeline-card_box {
+  padding: 0 50% 20px 0;
+}
+
+.ag-timeline-card_point-box {
+  display: inline-block;
+  margin: 0 14px 0 -28px;
+}
+
+.ag-timeline_item:nth-child(2n) .ag-timeline-card_point-box {
+  margin: 0 -28px 0 14px;
+}
+
+.ag-timeline-card_point {
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+  border: 3px solid #FF0;
+  background-color: #1d1d1b;
+  text-align: center;
+  font-size: 20px;
+  color: #FFF;
+  border-radius: 50%;
+}
+
+.js-ag-active .ag-timeline-card_point {
+  color: #1d1d1b;
+  background-color: #FF0;
+}
+
+.ag-timeline-card_meta-box {
+  display: inline-block;
+}
+
+.ag-timeline-card_meta {
+  margin: 10px 0 0;
+  font-weight: bold;
+  font-size: 28px;
+  color: #FF0;
+}
+
+.ag-timeline-card_item {
+  display: inline-block;
+  width: 45%;
+  margin: -77px 0 0;
+  background-color: #282828;
+  opacity: 0;
+  border-radius: 6px;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, .5);
+  transition: transform .5s, opacity .5s;
+  position: relative;
+}
+
+.ag-timeline_item:nth-child(2n+1) .ag-timeline-card_item {
+  transform: translateX(-200%);
+}
+
+.ag-timeline_item:nth-child(2n) .ag-timeline-card_item {
+  transform: translateX(200%);
+}
+
+.js-ag-active.ag-timeline_item:nth-child(2n+1) .ag-timeline-card_item,
+.js-ag-active.ag-timeline_item:nth-child(2n) .ag-timeline-card_item {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.ag-timeline-card_info {
+  padding: 20px 30px;
+}
+
+.ag-timeline-card_title {
+  margin: 10px 0 0;
+  font-weight: bold;
+  font-size: 28px;
+  color: #FF0;
+}
+
+.ag-timeline-card_desc {
+  line-height: 1.45;
+  font-size: 16px;
+  color: #FFF;
+}
+
+.ag-timeline-card_arrow {
+  height: 18px;
+  width: 18px;
+  margin-top: 20px;
+  background-color: #282828;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: rotate(45deg);
+}
+
+.ag-timeline_item:nth-child(2n+1) .ag-timeline-card_arrow {
+  margin-left: calc(-18px / 2);
+  margin-right: calc(-18px / 2);
+}
+
+.ag-timeline_item:nth-child(2n) .ag-timeline-card_arrow {
+  margin-left: -10px;
+  right: auto;
+  left: 0;
+}
+
+.timeline-item {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.timeline-item.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-progress {
+  width: 100%;
+  height: 0;
+  background-color: #ff0;
+  transition: height 0.3s ease-out;
+}
+
+.timeline-item.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-progress {
+  transition: height 0.3s ease;
+}
+
+
+@media only screen and (max-width: 979px) {
+  .ag-timeline_line {
+    left: 30px;
+  }
+
+  .ag-timeline_item:nth-child(2n) {
+    text-align: left;
+  }
+
+  .ag-timeline-card_box,
+  .ag-timeline_item:nth-child(2n) .ag-timeline-card_box {
+    padding: 0 0 20px;
+  }
+
+  .ag-timeline-card_meta-box {
+    display: none;
+  }
+
+  .ag-timeline-card_point-box,
+  .ag-timeline_item:nth-child(2n) .ag-timeline-card_point-box {
+    margin: 0 0 0 8px;
+  }
+
+  .ag-timeline-card_item {
+    width: auto;
+    margin: -65px 0 0 75px;
+  }
+
+  .ag-timeline_item:nth-child(2n+1) .ag-timeline-card_item,
+  .ag-timeline_item:nth-child(2n) .ag-timeline-card_item {
+    transform: translateX(200%);
+  }
+}

@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 210 65% 90%; /* Light blue (#D4EBF8) */
+    --foreground: 220 75% 30%; /* Dark blue (#0A3981) */
+    --card: 210 65% 100%; /* White */
+    --card-foreground: 220 75% 30%; /* Dark blue */
+    --popover: 210 65% 95%; /* Slightly lighter background */
+    --popover-foreground: 220 75% 35%; /* Slightly lighter dark blue */
+    --primary: 220 75% 40%; /* Primary blue (#1F509A) */
+    --primary-foreground: 210 65% 98%; /* Almost white */
+    --secondary: 210 65% 85%; /* Lighter version of light blue */
+    --secondary-foreground: 220 75% 30%; /* Dark blue */
+    --muted: 210 65% 80%; /* Muted light blue */
+    --muted-foreground: 220 75% 40%; /* Slightly lighter primary blue */
+    --accent: 220 75% 40%; /* Same as primary for consistent look */
+    --accent-foreground: 210 65% 98%; /* Almost white */
+    --destructive: 0 84.2% 60.2%; /* Red for destructive actions */
+    --destructive-foreground: 0 0% 98%; /* White */
+    --border: 210 65% 70%; /* Lighter border */
+    --input: 210 65% 85%; /* Light blue input background */
+    --ring: 220 75% 40%; /* Primary blue ring */
+
+    /* Modern, vibrant color palette */
+    --chart-1: 340 82% 52%;  /* Deep Rose */
+    --chart-2: 262 83% 58%;  /* Vibrant Purple */
+    --chart-3: 199 89% 48%;  /* Bright Blue */
+    --chart-4: 166 84% 39%;  /* Emerald */
+    --chart-5: 31 95% 58%;   /* Warm Orange */
+    --chart-6: 142 71% 45%;  /* Fresh Green */
+    --chart-7: 230 83% 62%;  /* Royal Blue */
+    --chart-8: 291 91% 65%;  /* Rich Pink */
+    --chart-9: 15 86% 57%;   /* Coral */
+
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 220 75% 20%; /* Darkest blue */
+    --foreground: 210 65% 95%; /* Very light blue */
+    --card: 220 75% 25%; /* Slightly lighter than background */
+    --card-foreground: 210 65% 98%; /* Almost white */
+    --popover: 220 75% 25%; /* Same as card */
+    --popover-foreground: 210 65% 98%; /* Almost white */
+    --primary: 210 65% 95%; /* Very light blue */
+    --primary-foreground: 220 75% 20%; /* Darkest blue */
+    --secondary: 220 75% 30%; /* Dark blue */
+    --secondary-foreground: 210 65% 98%; /* Almost white */
+    --muted: 220 75% 25%; /* Dark muted blue */
+    --muted-foreground: 210 65% 85%; /* Light blue */
+    --accent: 210 65% 95%; /* Very light blue */
+    --accent-foreground: 220 75% 20%; /* Darkest blue */
+    --destructive: 0 62.8% 30.6%; /* Dark red */
+    --destructive-foreground: 0 0% 98%; /* White */
+    --border: 220 75% 35%; /* Dark border */
+    --input: 220 75% 30%; /* Dark input background */
+    --ring: 210 65% 95%; /* Very light blue ring */
+
+    /* Dark mode adjustments */
+    --chart-1: 340 82% 62%;  /* Lighter Deep Rose */
+    --chart-2: 262 83% 68%;  /* Lighter Purple */
+    --chart-3: 199 89% 58%;  /* Lighter Blue */
+    --chart-4: 166 84% 49%;  /* Lighter Emerald */
+    --chart-5: 31 95% 68%;   /* Lighter Orange */
+    --chart-6: 142 71% 55%;  /* Lighter Green */
+    --chart-7: 230 83% 72%;  /* Lighter Royal Blue */
+    --chart-8: 291 91% 75%;  /* Lighter Pink */
+    --chart-9: 15 86% 67%;   /* Lighter Coral */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
